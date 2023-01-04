@@ -1,0 +1,250 @@
+body {
+    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+    letter-spacing: -0.025em;
+}
+
+input,
+button,
+textarea {
+    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+    color: #444;
+    vertical-align: middle;
+}
+
+button {
+    cursor: pointer;
+}
+
+.btn_o {
+    background: transparent;
+    border: none;
+    outline: none;
+    line-height: 1;
+}
+
+.m_btn {
+    position: relative;
+    font-size: 0;
+    width: 30px;
+    height: 30px;
+    background: #f2f2f2;
+    border-radius: 5px;
+
+    border:  none;
+    outline: none;
+}
+
+.m_btn::before,
+.m_btn::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    height: 1px;
+    background: #444;
+    transition: 0.5s;
+}
+
+.m_btn::before {
+    top: 7px;
+}
+
+.m_btn::after {
+    bottom: 8px;
+}
+
+.m_btn.on::before {
+    transform: translate(-100px,0);
+    opacity: 0;
+}
+
+.m_btn.on::after {
+    transform: translate(100px,0);
+    opacity: 0;
+}
+
+.m_btn span::before,
+.m_btn span::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 5px;
+    right: 5px;
+    height: 1px;
+    background: #444;
+    transition: 0.5s;
+}
+
+.m_btn.on span::before {
+    transform: rotate(135deg);
+   
+}
+
+.m_btn.on span::after {
+    transform: rotate(-135deg);  
+}
+
+
+.bold {
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.b {
+    font-weight: 700;
+}
+
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .inner {
+        flex-direction: column;
+        width: auto;
+        padding: 0 15px;
+    }
+}
+
+.flex_inner {
+    display: flex;
+    gap: 30px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.flex_inner>* {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .flex_inner {
+        flex-direction: column;
+        width: auto;
+        padding: 0 15px;
+    }
+    
+}
+
+.mbr {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mbr {
+        display: block;
+    }
+}
+
+.mc {
+    color: #ff6347;
+}
+
+.mbg {
+    background: #f9f9f9;
+}
+
+.sec {
+    padding: 100px 0;
+}
+
+.sec .tit {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .sec .tit {
+        width: auto;
+        padding: 0 15px;
+    }
+}
+
+.sec .tit h2 {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.35em;
+    margin: 0 0 10px 0;
+}
+
+.sec .tit .tit_dec {
+    display: block;
+    font-size: 14px;
+    margin: 0 0 50px 0;
+    word-break: keep-all;
+    line-height: 24px;
+}
+
+.btn {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid #444;
+    padding: 7px 20px 7px 20px;
+}
+
+.label {
+    border: 10px solid #ff6347;
+    border-right: 10px solid transparent;
+    height: 0;
+}
+
+.label>span {
+    display: block;
+    color: #fff;
+    font-size: 13px;
+    transform: translate(0, -50%);
+    padding: 0 20px 0 0;
+}
+
+.youtube_csae {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 비율 맞추는 방법 
+    9/16하면 56.25% 나옴
+    padding-bottom주고 동영상은 포지션으로 띄우기*/
+}
+
+.youtube_csae iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.resposive_case {
+    position: relative;
+    background: tomato;
+    padding-bottom: calc(56.25% + 3px);
+}
+
+.resposive_case>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.to_top {
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+
+    z-index: 9999;
+}
+
+.to_top button {
+    border: none;
+    outline: none;
+}
+
+.to_top i {
+    background: #ff6347;
+    color: #fff;
+    font-size: 30px;
+    padding: 10px;
+}

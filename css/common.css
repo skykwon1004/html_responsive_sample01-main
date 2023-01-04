@@ -1,0 +1,59 @@
+/* reset : 기존에 html tag에 적용된 스타일을 
+div기본 스타일로 통일 (reser)해 줘서 레이아웃을 잡기 편리하도록 만들어주는 css */
+
+/* 선택자를 사용해서 연결된 파일의 스타일을 빠꾸어 준다. */
+
+/* *은 모든(all) tag라는 의미를 가진 선택자... */
+* {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    /* padding 과 border를 포함해서 박스 사이즈가 늘어나는 것을 박스 안쪽으로 가둔다. */
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+em,
+i,
+address {
+    font-style: normal;
+}
+
+b,
+strong {
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+body {
+    /* 문장간의 공간을 폰트사이즈와 동일하게 해서 layout을 쉽게 구현할 수 있게 해준다. */
+    line-height: 1;
+    color: #444;
+}
+
+.cf::after,
+.clearflx::after,
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
